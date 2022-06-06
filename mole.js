@@ -10,7 +10,7 @@ function popUpRandomMole() {
     return;
   }
 
-  const moleHeads = document.querySelectorAll('.wgs__mole-head:not(.wgs__mole-head--whacked)');
+  const moleHeads = document.querySelectorAll('.wgs__mole-head');
   if (moleHeads.length === 0) {
     return;
   }
@@ -19,6 +19,7 @@ function popUpRandomMole() {
 
   clickable = true;
   moleHead.classList.remove('wgs__mole-head--hidden');
+  moleHead.classList.remove('wgs__mole-head--whacked');
 
   molesLeft -= 1;
   document.querySelector('.sb__moles').innerHTML = molesLeft;
@@ -49,12 +50,10 @@ window.addEventListener('DOMContentLoaded', () => {
       hideMole(event.target);
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-      event.target.classList.add('wgs__mole-head--hidden');
+      // event.target.classList.add('wgs__mole-head--hidden');
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
       event.target.classList.add('wgs__mole-head--whacked');
-
-
     });
   }
 });

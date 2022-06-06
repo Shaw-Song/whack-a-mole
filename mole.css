@@ -17,7 +17,7 @@
   width: 188px;
   position: absolute;
   left: 54px;
-  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition: margin-top 0.5s;
 }
 .wgs__mole-head--hidden {
   height: 178px;
@@ -25,15 +25,20 @@
   position: absolute;
   left: 54px;
   margin-top: 241px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s, margin-top 0.5s, margin-left 0.5s, transform 0.5s;
 }
 .wgs__mole-head--whacked {
-
-  height: 17px;
-  width: 18px;
+  /* border: 120px solid #645DED;
+  border-radius: 50%; */
+  opacity: 0;
+  height: 0;
+  width: 0;
   position: absolute;
-  left: 154px;
-  margin-top: 41px;
+  margin-top: 70px;
+  margin-left: 100px;
   transform: rotate(180deg);
+
+
 }
 .wgs__dirt-pile {
   height: 110px;
